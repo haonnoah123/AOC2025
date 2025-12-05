@@ -42,7 +42,6 @@ class Day05 {
         // compactRange list will also be sorted.
         Pair<Long, Long> compactRange = ranges.getFirst();
         for (Pair<Long, Long> range : ranges) {
-            // Pair<Long, Long> compactRange = compactRanges.getLast();
             if (range.getLeft() <= compactRange.getRight()) {
                 compactRange = new Pair<Long, Long>(compactRange.getLeft(),
                         Math.max(compactRange.getRight(), range.getRight()));
